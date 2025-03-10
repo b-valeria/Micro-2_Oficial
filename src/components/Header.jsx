@@ -1,7 +1,13 @@
-import React from "react";
+import React,{use} from "react";
 import styles from "./MainContainer.module.css";
-
+import { Link } from "react-router";
+import { UserContext } from "../context/UserContext";
 function Header() {
+
+  const contextUser = use(UserContext);
+
+  const {user,email,loggedIn} =contextUser; 
+  console.log(email);
   return (
     <header className={styles.header}>
       <img
@@ -21,8 +27,31 @@ function Header() {
         </a>
         <a href="#" className={styles.navItem}>
           Contacto
+        </a>  
+        
+        
+        { loggedIn && 
+        
+    
+        <>
+            <a href="#" className={styles.navItem}>
+          Reserve
+        </a>  <a href="#" className={styles.navItem}>
+          Foro
         </a>
-        <button className={styles.loginButton}>Login</button>
+
+        
+        </>
+
+
+
+        
+        
+        }
+        <Link to='/login' className={styles.loginButton}>Login</Link>
+
+
+  
       </nav>
     </header>
   );

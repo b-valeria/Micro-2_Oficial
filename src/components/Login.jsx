@@ -1,13 +1,19 @@
 import React, { useState } from "react";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { auth, provider } from "../firebase";
+import { signInWithPopup, GoogleAuthProvider,getAuth } from "firebase/auth";
+import { app } from "../firebase";
 
+
+
+const auth = getAuth(app);
 const Login = () => {
   const [error, setError] = useState(null);
 
   const handleLogin = async () => {
     try {
-      await signInWithPopup(auth, provider);
+
+      const provider = new GoogleAuthProvider();
+      const response = await signInWithPopup(auth, provider);
+      console.log(response);
     } catch (err) {
       setError(err.message);
     }

@@ -1,0 +1,227 @@
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .backgroundImage {
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .logo {
+    width: 211px;
+    height: 211px;
+    position: absolute;
+    top: -25px;
+    left: 22px;
+  }
+  @media (width<=640px) {
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .navigation {
+    align-items: center;
+    gap: 40px;
+    display: flex;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+  }
+  @media (width<=991px) {
+    .navigation {
+      background-color: #ffffffe6;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      transition: transform 0.3s;
+      top: 0;
+      right: 0;
+      transform: translate(100%);
+    }
+  }
+  .navLink {
+    color: #27034b;
+    cursor: pointer;
+    font-family: Italiana, serif;
+    font-size: 36px;
+    text-decoration: none;
+  }
+  @media (width<=640px) {
+    .navLink {
+      font-size: 24px;
+    }
+  }
+  .loginButton {
+    color: #27034b;
+    cursor: pointer;
+    border: 3px solid #27034b;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-family: Italiana, serif;
+    font-size: 36px;
+    background: none;
+  }
+  .loginContainer {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+  }
+  .loginBox {
+    backdrop-filter: blur(45px);
+    background-color: #d9d9d91a;
+    border: 3px solid #27034b;
+    border-radius: 40px;
+    width: 460px;
+    height: 525px;
+    padding: 24px;
+    position: relative;
+    box-shadow:
+      inset 45px -45px 45px #a5a5a51a,
+      inset -45px 45px 45px #ffffff1a;
+  }
+  @media (width<=991px) {
+    .loginBox {
+      width: 90%;
+      max-width: 460px;
+    }
+  }
+  @media (width<=640px) {
+    .loginBox {
+      padding: 16px;
+    }
+  }
+  .loginHeader {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  .loginTitle {
+    color: #27034b;
+    font-family: Inter, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+  }
+  @media (width<=640px) {
+    .loginTitle {
+      font-size: 36px;
+    }
+  }
+  .closeButton {
+    background-color: #27034b;
+    border-radius: 0 15px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+  }
+  .decorativeImage {
+    width: 111px;
+    height: 111px;
+    position: absolute;
+    top: 5px;
+    left: 339px;
+    right: -20px;
+  }
+  @media (width<=640px) {
+    .decorativeImage {
+      top: -5px;
+      left: 225px;
+    }
+  }
+  .inputGroup {
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+  }
+  .inputField {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+  }
+  .inputText {
+    color: #27034b;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+  }
+  @media (width<=640px) {
+    .inputText {
+      font-size: 16px;
+    }
+  }
+  .inputIcon {
+    width: 43px;
+    height: 43px;
+  }
+  @media (width<=640px) {
+    .inputIcon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .inputDivider {
+    background-color: #27034b;
+    height: 1px;
+    margin: 10px 0;
+  }
+  .optionsRow {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+  }
+  .rememberMe {
+    align-items: center;
+    gap: 5px;
+    display: flex;
+  }
+  .checkbox {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 16px;
+    height: 15px;
+    margin: 0;
+  }
+  .rememberText,
+  .forgotPassword {
+    color: #27034b;
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .submitButton {
+    color: #fff;
+    background: linear-gradient(#27034b 0%, #27034b80 79.63%);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 263px;
+    height: 27px;
+    margin: 20px auto;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+  }
+  .registerPrompt {
+    text-align: center;
+    color: #27034b;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    margin: 0;
+  }
+  .registerLink {
+    font-weight: 700;
+    text-decoration: none;
+    color: #27034b;
+  }
